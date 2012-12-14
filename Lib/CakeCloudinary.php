@@ -19,13 +19,6 @@ class CakeCloudinary {
 		$config = Configure::read('Cloudinary');
 		$this->config = $config;
 
-		Cache::config('cloudinary', array(
-	    'engine' => 'File',
-	    'duration' => '+12 hours',
-	    'probability' => 100,
-	    'path' => CACHE . 'cloudinary' . DS,
-		));
-
 		$this->env = $this->getEnv();
 		$this->path = Configure::read('Cloudinary.path');
 
